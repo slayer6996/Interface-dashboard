@@ -11,9 +11,26 @@ function GiveAnswer(a, b, c) {
     let ans1 = (-b - d) / (2 * a);
     let ans2 = (-b + d) / (2 * a);
     console.log(ans1, ans2);
+    if(((b*b)-(4*a*c))<0)
+    {
+        imans();
+        console.log('ima');
+    }
+    else{
     printAns(ans1, ans2);
+    }
 }
 
+function imans()
+{
+    let ans=document.createTextNode("Roots are imaginary");
+    let ansbox=document.createElement('h4');
+    ansbox.style.color='white';
+    ansbox.setAttribute('id','ansbox');
+    ansbox.appendChild(ans);
+    document.getElementById('answer').appendChild(ans);
+}
+s
 function printAns(ans1, ans2) {
     let x1=document.createTextNode('x1 is '+ans1 + ' and x2 is '+ans2);
    // let x2=document.createTextNode('x2 is '+ans2);
