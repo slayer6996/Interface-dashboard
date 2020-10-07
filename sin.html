@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<style>
+label{margin-left:0;}
+</style>
+<body>
+    <div class="box">
+        <h2 style="text-decoration: underline;">Sine Calculator</h2>
+	<h3>Sin(<i id="angle">angle</i>)=<i id="sine">....</i></h3>
+        <div class="content">
+	    <label> Sin</label>
+            <input id="a" type="text" placeholder="Enter Angle">
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-primary" onclick="sin()">Lets Go!</button>
+        </div>
+        <div id="answer">
+
+        </div>
+    </div>
+
+   
+    <script>
+	function sin(){
+	let a = document.getElementById('a').value;
+	let d=Math.PI;
+	let e=d*a/180;
+	let b = document.getElementById('angle').innerText= a;
+	let c = document.getElementById('sine').innerText= Math.sin(e);}
+   </script>
+</body>
+</html>
