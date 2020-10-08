@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-dark ">
+<div class="container">
+<a class="navbar-brand" href="index.html"> The Calculator </a>
+<div>
+<ul >
+<li ><a href="index.html">Quadratic</a></l>
+<li ><a href="sin.html">Sin</a></l>
+<li ><a href="cos.html">Cos</a></l>
+<li ><a href="cosinverse.html">Cos<sup>-1</sup></a></l>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+    <div class="box">
+        <h2 style="text-decoration: underline;">Quadratic Equation Solver</h2>
+	<h3>ax<sup>2</sup>+bx+c=0</h3>
+        <div class="content">
+	    <label> Solve This:</label>
+            <input id="a" type="text" placeholder="Enter A"><h2>x<sup>2</sup>+</h2>
+            <input id="b" type="text" placeholder="Enter B"><h2>x+</h2>
+            <input id="c" type="text" placeholder="Enter C">
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-primary" onclick="solve()">Lets Go!</button>
+        </div>
+        <div id="answer">
+
+        </div>
+    </div>
+
+   
+    <script src="./script.js"></script>
+</body>
+</html>
