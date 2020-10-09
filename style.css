@@ -1,8 +1,33 @@
 body{
     background:url(math.jfif);
     background-size:contain;
-
 }
+
+nav{
+	border:1px solid white;
+	border-top:0;
+	border-left:0;
+	border-radius:100px;
+	text-shadow:1px 1px yellow;
+	background:#333;
+	font-family:georgia;
+	color:white;
+	margin:20px;
+	font-weight:bolder;}
+
+nav ul{
+	list-style-type:none;
+	overflow:hidden;}
+
+nav ul li{
+	float:right;
+	padding:10px;}
+
+nav ul li a{
+	color:white;
+	font-size:1.2em;
+	font-weight:bold;
+	display:inline-block;}
 
 .box{
     display: flex;
