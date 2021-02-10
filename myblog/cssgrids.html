@@ -1,0 +1,181 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-grids</title>
+    <link rel="stylesheet" href="./article.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+    <div class="header">
+        <h3>SimplyCode</h3>
+    </div>
+    <div class="wrapper">
+        <div class="sidebar">
+            <a href="./index.html">Home</a>
+            <a href="">HTML</a>
+            <a href="./index-css.html" style="background-color: #165081;">CSS</a>
+            <a href="">JavaScript</a>
+            <a href="">C++</a>
+        </div>
+        <div class="main">
+            <h1>CSS-Grids</h1>
+            <p>This is how we tell that a div is supposed to be made into a grid.</p>
+            <div class="code">
+                <p>
+                    .wrapper{ <br>
+                    display: grid;<br>
+                    grid-template-columns: 30% 70%;<br>
+                    }<br>
+                </p>
+            </div>
+            <p>This will divide the two divs into two columns in the row with first one occupying 30% and 70% space in the row.</p>
+            <br>
+            <br>
+            <p>Writing something like </p>
+            <div class="code">
+                <p>
+                    .wrapper{<br>
+                        display: grid;<br>
+                        gird-template-columns: 30% 30% 40%;<br>
+                        grid-column-grap: 1em; <br>
+                        grid-row-gap: 1em;<br>
+                        grid-gap: 1em;<br>
+                    }<br>
+                </p>
+            </div>
+            <p>will make 3 columns in a row.
+
+                The second line will create a gap between the columns. 
+                
+                The third line creates gap between rows. 
+                
+                The fourth line is gonna create gapping between rows and columns as well.</p>
+
+                <br>
+                <br>
+                <h3>Justify/align items</h3>
+                <div class="code">
+                    <p>justify-items: start; //puts it in the start <br>
+                        justify-items: center; //puts it in the center<br>
+                        justify-items: end; //puts it in the end<br>
+                        justify-items: stretch; //default<br> </p>
+                </div>
+                <p>These will move the div inside the row up and down.</p>
+                <div class="code">
+                    <p>
+                        align-items:start; <br>
+                        align-items:center;<br>
+                        align-items: end;<br>
+                        align-items: stretch;<br>
+                    </p>
+                </div>
+                <p>These will move the div inside the columns left and right.</p>
+                <div class="code">
+                    <p>
+                        align-self: start; <br>
+                        align-self: end;<br>
+                        //We can also use justify-self<br> 
+                    </p>
+                </div>
+                <p>This property when applied to a div will move it inside the row/column. </p>
+                <br>
+                <br>
+                <h3>Using fractions for grid-template-column/row</h3>
+                <p>Using fractions is way better than using percentages to avoid problems with margin and padding. </p>
+                <div class="code">
+                    <p>
+                        .wrapper{ <br>
+                            display: grid;<br>
+                            grid-template-column: 1fr 2fr 1fr;<br>
+                        }<br>
+                    </p>
+                </div>
+                <p>
+                    This will divide a row into 3 columns with the middle one being twice as wide as the other two. 
+                </p>
+                <br>
+                <p>Let's say we wanna make a lot of columns, say 8. Instead of writing the fractions 8 times what we can use is something called 'repeat'. </p>
+                <div class="code">
+                    <p>
+                        .wrapper{ <br>
+                            display:grid;<br>
+                            gid-template-column: repeat(8, 1fr);<br>
+                            grid-template-coumn: repeat(4, 1fr 2fr);<br>
+                        }<br>
+                    </p>
+                </div>
+                <p>
+                    the second line is gonna repeat a column 8 times. And the third line is gonna make a pattern of columns with 1fr and 2fr repeating 4 times. 
+                </p>
+
+                <br><br>
+
+                <h3>Height of the row in a grid</h3>
+                <br>
+                <div class="code">
+                    <p>
+                        .wrapper{ <br>
+                            display: grid;<br>
+                            grid-auto-rows: 100px;<br>
+                        }<br>
+                    </p>
+                </div>
+                <p>The second line will set the heights of the rows to 100px. But the content might overflow the row. So what we wanna do is the following.</p>
+                <br>
+                <div class="code">
+                    <p>
+                        .wrapper{ <br>
+                            display: grid;<br>
+                            grid-auto-rows: minmax(100px, auto);<br>
+                            }<br>
+                    </p>
+                </div>
+                <p>This is allow the row to stretch to contain the content inside of it if it overflows, otherwise it's gonna be 100px high.</p>
+
+                <br><br>
+
+                <h3>Nesting of grids</h3>
+                <p>It is possible for us to make grids inside another grid. </p>
+                <br>
+                <div class="code">
+                    <p>
+                        &lt; div class="nested" &gt; <br>
+                        &lt; div class="nest1 &gt;<br>
+                        
+                        &lt; /div &gt;<br>
+                        &lt; /div &gt;<br>
+                    </p>
+                </div>
+                <p>The div nested and nest 1 can both be given properties of a grid.</p>
+
+                <br><br>
+
+                <h3>Going two dimensional</h3>
+                <img src="./gridtemp.JPG" alt="">
+                <p>
+                    Let's assume that the colored boxes represent divs now what we want to do is to stretch the first grid (red) such that it covers column 1 to 3 and row 1 to 4, this is how we do it in CSS:
+                </p>
+                <div class="code">
+                    <p>
+                        //apply these properties to the first red div <br>
+                        grid-column: 1/3;<br>
+                        grid-row:1/4;<br>
+                        grid-column: 2; //this would mean we're starting at second line of column<br>
+                        grid-row: 1; //this means wer're starting at first line of row<br>
+                    </p>
+                </div>
+                <p>The rest of the divs will adjust themselves accordingly.</p>
+                <br>
+                <p>
+                    This even lets us overlap divs which we don't get with flexbox. 
+                </p>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
