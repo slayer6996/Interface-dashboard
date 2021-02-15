@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sidebar Dashboard Template</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="round1.css">
+</head>
+
+<body>
+
+  <!-- <input type="checkbox" id="check"> -->
+
+  <!--header area start-->
+  <header>
+    <!-- <label for="check">
+ 	  		<i class="fas fa-bars" id=sidebar_btn></i>
+ 	  	</label> -->
+    <div class="left_area">
+      <h3>Interface</h3>
+    </div>
+    <div class="right_area">
+      <a href="#" class="logout_btn">Logout</a>
+    </div>
+  </header>
+  <!--header area end-->
+  <!--sidebar start-->
+
+
+  <div class="sidebar">
+    <center>
+      <img src="1.jpg" class="profile_image" alt="">
+      <h4>Interface</h4>
+    </center>
+    <a href="./round1-instructions.html" style="background-color: #ff9200;"><span style="text-align: center;">Round 1</span></a>
+    <a href="./mentoringsession-session.html"><i class="fa fa-map-pin"></i><span>Mentoring Session</span></a>
+    <a href="./pitch-instructions.html"><i class="fa fa-podcast"></i><span>Pitching Round</span></a>
+    <a href="#"><i class="fa fa-users"></i><span>About Us</span></a>
+    <a href="#"><i class="fa fa-sliders-h"></i><span>Settings</span></a>
+  </div>
+  <div class="mainbody">
+    <div class="upper-mainbody">
+      <a href="./round1-instructions.html" style=" color: #fff; margin-top: 100px; margin-left: 60px;text-decoration: none; font-size: larger;">Instructions</a>
+      <a href="./round1-problemstatement.html" style=" color: #fff; margin-top: 100px; margin-left: 60px;text-decoration: none; font-size: larger;">Problem statement</a>
+      <a href="#" style=" color: #fff; margin-top: 100px; margin-left: 60px;text-decoration: none; font-size: larger; border-bottom:5px solid white; margin-bottom:-8px;">Submissions</a>
+    </div>
+    <hr style="color: black;">
+
+    
+    <div class="container">
+      <form action="action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="tname">Theme</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="tname" name="theme" placeholder="Your Theme..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="stname">Sub Theme</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="stname" name="subtheme" placeholder="Your Sub Theme..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="state">State</label>
+          </div>
+          <div class="col-75">
+            <select id="state" name="state">
+              <option value="kerala">Kerala</option>
+              <option value="zxcvb">zxcvb</option>
+              <option value="bihar">Bihar</option>
+            </select>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+      <p>Click on the "Choose File" button to upload a file:</p>
+    
+    <form action="/action_page.php">
+      <input type="file" id="myFile" name="filename">
+      <input type="submit">
+    </form>
+    </div>
+  </div>
+</body>
+
+</html>
